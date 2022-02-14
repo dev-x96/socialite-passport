@@ -1,0 +1,56 @@
+{
+    "name": "x96/socialite-passport",
+    "description": "Easy socialite authentication using Laravel passport identity provider.",
+    "keywords": [
+        "webur",
+        "socialite",
+        "passport",
+        "multi-authentication",
+        "single sign on",
+        "SSO"
+    ],
+    "homepage": "https://x-96.ru",
+    "license": "MIT",
+    "type": "library",
+    "authors": [
+        {
+            "name": "Uriy Burka",
+            "email": "dev@x-96.ru"
+        }
+    ],
+    "require": {
+        "php": "^8.0",
+        "socialiteproviders/laravelpassport": "^4.1.0",
+        "laravel/socialite": "^v5.5.0",
+        "doctrine/dbal": "^3.3"
+    },
+    "require-dev": {
+        "fzaninotto/faker": "^v1.9.2",
+        "orchestra/testbench": "^v6.24.0",
+        "phpunit/phpunit": "^9.5.13"
+    },
+    "autoload": {
+        "psr-4": {
+            "x96\\SocialitePassport\\": "src"
+        }
+    },
+    "autoload-dev": {
+        "psr-4": {
+            "x96\\SocialitePassport\\Tests\\": "tests"
+        }
+    },
+    "scripts": {
+        "test": "vendor/bin/phpunit",
+        "test-coverage": "vendor/bin/phpunit --coverage-html coverage"
+    },
+    "config": {
+        "sort-packages": true
+    },
+    "extra": {
+        "laravel": {
+            "providers": [
+                "x96\\SocialitePassport\\SocialitePassportServiceProvider"
+            ]
+        }
+    }
+}
